@@ -21,7 +21,7 @@ import subprocess
 abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
-subprocess.call('ls -a -l', shell=True)
+subprocess.call('sudo apt-get install -y doxygen', shell=True)
 subprocess.call('doxygen Doxyfile.in', shell=True)
 
 # Add Chinese translation for bootstrap theme. For more infomation,
