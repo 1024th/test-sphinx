@@ -5,9 +5,7 @@ jobs:
     name: Push Sphinx Pages
     runs-on: ubuntu-latest
     steps:
-    - name: Install Doxygen
-      run: sudo apt-get install -y doxygen
-    - uses: seanzhengw/sphinx-pages@master
+    - uses: 1024th/sphinx-pages@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         create_readme: true
