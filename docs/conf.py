@@ -14,9 +14,13 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
 import subprocess
 
 # Doxygen
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
 subprocess.call('doxygen Doxyfile.in', shell=True)
 
 # Add Chinese translation for bootstrap theme. For more infomation,
